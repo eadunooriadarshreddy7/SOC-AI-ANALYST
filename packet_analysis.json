@@ -1,0 +1,252 @@
+{
+  "capture_time": "2026-03-10T23:51:50.881159",
+  "total_packets": 150,
+  "protocols": {
+    "TCP": 56,
+    "UDP": 48,
+    "DNS": 46
+  },
+  "top_sources": [
+    [
+      "192.168.1.7",
+      14
+    ],
+    [
+      "192.168.1.14",
+      13
+    ],
+    [
+      "192.168.1.11",
+      12
+    ],
+    [
+      "192.168.1.4",
+      11
+    ],
+    [
+      "192.168.1.3",
+      10
+    ]
+  ],
+  "top_destinations": [
+    [
+      "192.168.1.9",
+      10
+    ],
+    [
+      "52.86.233.100",
+      10
+    ],
+    [
+      "192.168.1.13",
+      9
+    ],
+    [
+      "192.168.1.7",
+      8
+    ],
+    [
+      "192.168.1.3",
+      7
+    ]
+  ],
+  "suspicious_ports": {
+    "6666": [
+      {
+        "src": "192.168.1.13",
+        "dst": "192.168.1.9",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.13",
+        "dst": "192.168.1.3",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.10",
+        "dst": "192.168.1.9",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.13",
+        "dst": "192.168.1.3",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.7",
+        "dst": "192.168.1.6",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.10",
+        "dst": "52.86.233.100",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.9",
+        "dst": "192.168.1.13",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.8",
+        "dst": "192.168.1.7",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.7",
+        "dst": "192.168.1.13",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.7",
+        "dst": "1.1.1.1",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.9",
+        "dst": "192.168.1.12",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "1.1.1.1",
+        "dst": "192.168.1.4",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "1.1.1.1",
+        "dst": "185.220.101.47",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.2",
+        "dst": "192.168.1.14",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.9",
+        "dst": "192.168.1.14",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.9",
+        "dst": "192.168.1.14",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.5",
+        "dst": "192.168.1.14",
+        "note": "IRC/Botnet"
+      },
+      {
+        "src": "192.168.1.13",
+        "dst": "185.220.101.47",
+        "note": "IRC/Botnet"
+      }
+    ],
+    "4444": [
+      {
+        "src": "192.168.1.11",
+        "dst": "104.26.10.112",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.13",
+        "dst": "192.168.1.14",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.3",
+        "dst": "192.168.1.4",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.7",
+        "dst": "185.220.101.47",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.10",
+        "dst": "192.168.1.11",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.11",
+        "dst": "192.168.1.9",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.2",
+        "dst": "192.168.1.13",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.5",
+        "dst": "192.168.1.10",
+        "note": "Metasploit default"
+      },
+      {
+        "src": "192.168.1.10",
+        "dst": "104.26.10.112",
+        "note": "Metasploit default"
+      }
+    ]
+  },
+  "suspicious_dns_queries": [
+    {
+      "src": "192.168.1.6",
+      "query": "a1b2c3d4e5.dnscat.io",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "192.168.1.3",
+      "query": "update.windowsupdate-cdn.net",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "192.168.1.6",
+      "query": "a1b2c3d4e5.dnscat.io",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "1.1.1.1",
+      "query": "update.windowsupdate-cdn.net",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "192.168.1.14",
+      "query": "a1b2c3d4e5.dnscat.io",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "185.220.101.47",
+      "query": "update.windowsupdate-cdn.net",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "185.220.101.47",
+      "query": "a1b2c3d4e5.dnscat.io",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "104.26.10.112",
+      "query": "a1b2c3d4e5.dnscat.io",
+      "type": 1,
+      "suspicious": true
+    },
+    {
+      "src": "1.1.1.1",
+      "query": "update.windowsupdate-cdn.net",
+      "type": 1,
+      "suspicious": true
+    }
+  ],
+  "total_dns_queries": 46,
+  "large_transfer_count": 0
+}

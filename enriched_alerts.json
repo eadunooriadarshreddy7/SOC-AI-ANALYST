@@ -1,0 +1,723 @@
+[
+  {
+    "alert_id": "ALT-001-7606",
+    "rule_id": "001",
+    "rule_name": "SSH Brute Force Detected",
+    "severity": "HIGH",
+    "description": "IP 103.252.118.22 made 25 failed SSH login attempts targeting user 'root'",
+    "src_ip": "103.252.118.22",
+    "mitre_tid": "T1110.001",
+    "mitre_name": "Brute Force: Password Guessing",
+    "timestamp": "2026-03-10T23:51:50.185517",
+    "evidence_count": 5,
+    "sample_log": "Mar 10 23:26:46 homeserver sshd[8529]: Failed password for root from 103.252.118.22 port 58485 ssh2",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:24:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 50479 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:26:46 homeserver sshd[8529]: Failed password for root from 103.252.118.22 port 58485 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:47:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 42373 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:34:46 homeserver sshd[2788]: Failed password for root from 103.252.118.22 port 53769 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:28:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 46785 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:26:46 homeserver sshd[9707]: Failed password for root from 103.252.118.22 port 32029 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:42:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 37975 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:49:46 homeserver sshd[2075]: Failed password for root from 103.252.118.22 port 30822 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:37:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 56170 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:42:46 homeserver sshd[3464]: Failed password for root from 103.252.118.22 port 32915 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      }
+    ],
+    "threat_intel": {
+      "ip": "103.252.118.22",
+      "abuse_score": 76,
+      "reports": 89,
+      "country": "CN",
+      "isp": "CNSERVERS LLC",
+      "categories": [
+        "VPN",
+        "Proxy",
+        "Spam"
+      ],
+      "known_attacker": false,
+      "last_seen": "2024-02-20",
+      "source": "Offline Threat DB (demo mode)",
+      "tags": [
+        "anonymous-proxy",
+        "vpn-provider"
+      ]
+    }
+  },
+  {
+    "alert_id": "ALT-002-3432",
+    "rule_id": "002",
+    "rule_name": "Port Scan Detected",
+    "severity": "MEDIUM",
+    "description": "IP 179.43.128.10 scanned 12 ports: [21, 22, 23, 25, 80, 443, 3306, 5432, 6379, 8080, 8443, 9200]",
+    "src_ip": "179.43.128.10",
+    "mitre_tid": "T1046",
+    "mitre_name": "Network Service Discovery",
+    "timestamp": "2026-03-10T23:51:50.185676",
+    "evidence_count": 6,
+    "sample_log": "Mar 10 23:32:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=22",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:17:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 22",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": null,
+        "raw_log": "Mar 10 23:32:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=22",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      },
+      {
+        "timestamp": "Mar 10 23:14:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 3306",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 3306,
+        "username": null,
+        "raw_log": "Mar 10 23:12:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=3306",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      },
+      {
+        "timestamp": "Mar 10 23:29:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 9200",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 9200,
+        "username": null,
+        "raw_log": "Mar 10 23:46:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=9200",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      },
+      {
+        "timestamp": "Mar 10 23:51:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 443",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 443,
+        "username": null,
+        "raw_log": "Mar 10 23:44:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=443",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      },
+      {
+        "timestamp": "Mar 10 23:33:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 5432",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 5432,
+        "username": null,
+        "raw_log": "Mar 10 22:58:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=5432",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      },
+      {
+        "timestamp": "Mar 10 23:18:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 23",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 23,
+        "username": null,
+        "raw_log": "Mar 10 23:14:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=23",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      }
+    ],
+    "threat_intel": {
+      "ip": "179.43.128.10",
+      "abuse_score": 87,
+      "reports": 156,
+      "country": "BR",
+      "isp": "ServidoresCloud",
+      "categories": [
+        "Botnet",
+        "DDoS"
+      ],
+      "known_attacker": true,
+      "last_seen": "2024-02-25",
+      "source": "Offline Threat DB (demo mode)",
+      "tags": [
+        "botnet-node",
+        "ddos-participant"
+      ]
+    }
+  },
+  {
+    "alert_id": "ALT-003-0004",
+    "rule_id": "003",
+    "rule_name": "Possible DNS Tunneling",
+    "severity": "HIGH",
+    "description": "Host 192.168.1.4 made 8 suspicious DNS TXT queries with anomalously long subdomains",
+    "src_ip": "192.168.1.4",
+    "mitre_tid": "T1071.004",
+    "mitre_name": "Application Layer Protocol: DNS",
+    "timestamp": "2026-03-10T23:51:50.185731",
+    "evidence_count": 4,
+    "sample_log": "Mar 10 23:28:46 homeserver named[6898]: query: d7ab3305e44db31528337.data-86326bf0.laqnucxa.io IN TXT",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:18:46",
+        "host": "homeserver",
+        "service": "named",
+        "type": "dns_tunneling",
+        "message": "Unusual long DNS query: d7ab3305e44db31528337.data-86326bf0.laqnucxa.io",
+        "src_ip": "192.168.1.4",
+        "dst_ip": "8.8.8.8",
+        "dst_port": 53,
+        "username": null,
+        "raw_log": "Mar 10 23:28:46 homeserver named[6898]: query: d7ab3305e44db31528337.data-86326bf0.laqnucxa.io IN TXT",
+        "mitre": {
+          "tid": "T1071.004",
+          "name": "Application Layer Protocol: DNS"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:10:46",
+        "host": "homeserver",
+        "service": "named",
+        "type": "dns_tunneling",
+        "message": "Unusual long DNS query: 3a58d2b9ceacc0bda7b6631b813efd7784e5.data-86326bf0.laqnucxa.io",
+        "src_ip": "192.168.1.4",
+        "dst_ip": "8.8.8.8",
+        "dst_port": 53,
+        "username": null,
+        "raw_log": "Mar 10 23:50:46 homeserver named[7234]: query: 3a58d2b9ceacc0bda7b6631b813efd7784e5.data-86326bf0.laqnucxa.io IN TXT",
+        "mitre": {
+          "tid": "T1071.004",
+          "name": "Application Layer Protocol: DNS"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:47:46",
+        "host": "homeserver",
+        "service": "named",
+        "type": "dns_tunneling",
+        "message": "Unusual long DNS query: 26379032425c8a45c00f9e38ebf4cbc5da6.data-86326bf0.laqnucxa.io",
+        "src_ip": "192.168.1.4",
+        "dst_ip": "8.8.8.8",
+        "dst_port": 53,
+        "username": null,
+        "raw_log": "Mar 10 23:45:46 homeserver named[8412]: query: 26379032425c8a45c00f9e38ebf4cbc5da6.data-86326bf0.laqnucxa.io IN TXT",
+        "mitre": {
+          "tid": "T1071.004",
+          "name": "Application Layer Protocol: DNS"
+        },
+        "severity": "HIGH"
+      },
+      {
+        "timestamp": "Mar 10 23:10:46",
+        "host": "homeserver",
+        "service": "named",
+        "type": "dns_tunneling",
+        "message": "Unusual long DNS query: 9d7a3eb1f5ad39acafd7a04e6a35785f6510b5ac.data-86326bf0.laqnucxa.io",
+        "src_ip": "192.168.1.4",
+        "dst_ip": "8.8.8.8",
+        "dst_port": 53,
+        "username": null,
+        "raw_log": "Mar 10 23:12:46 homeserver named[5401]: query: 9d7a3eb1f5ad39acafd7a04e6a35785f6510b5ac.data-86326bf0.laqnucxa.io IN TXT",
+        "mitre": {
+          "tid": "T1071.004",
+          "name": "Application Layer Protocol: DNS"
+        },
+        "severity": "HIGH"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.4",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  },
+  {
+    "alert_id": "ALT-004-3269",
+    "rule_id": "004",
+    "rule_name": "New User Account Created",
+    "severity": "HIGH",
+    "description": "New system user 'dave43' created \u2014 potential persistence mechanism",
+    "src_ip": "192.168.1.6",
+    "mitre_tid": "T1136.001",
+    "mitre_name": "Create Account: Local Account",
+    "timestamp": "2026-03-10T23:51:50.185754",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:39:46 homeserver useradd[7387]: new user: name=dave43, UID=1002, GID=1002",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:42:46",
+        "host": "homeserver",
+        "service": "useradd",
+        "type": "new_user",
+        "message": "New user account created: dave43 (uid=1002)",
+        "src_ip": "192.168.1.6",
+        "dst_ip": "192.168.1.1",
+        "dst_port": null,
+        "username": "dave43",
+        "raw_log": "Mar 10 23:39:46 homeserver useradd[7387]: new user: name=dave43, UID=1002, GID=1002",
+        "mitre": {
+          "tid": "T1136.001",
+          "name": "Create Account: Local Account"
+        },
+        "severity": "HIGH"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.6",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  },
+  {
+    "alert_id": "ALT-005-7752",
+    "rule_id": "005",
+    "rule_name": "Suspicious Sudo Command",
+    "severity": "CRITICAL",
+    "description": "User 'admin' executed high-risk sudo command containing 'nc '",
+    "src_ip": "192.168.1.14",
+    "mitre_tid": "T1548.003",
+    "mitre_name": "Abuse Elevation Control Mechanism: Sudo",
+    "timestamp": "2026-03-10T23:51:50.185789",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:48:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'nc -lvp 4444'",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:49:46",
+        "host": "homeserver",
+        "service": "sudo",
+        "type": "sudo_abuse",
+        "message": "User admin ran suspicious sudo command: nc -lvp 4444",
+        "src_ip": "192.168.1.14",
+        "dst_ip": "192.168.1.1",
+        "dst_port": null,
+        "username": "admin",
+        "raw_log": "Mar 10 23:48:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'nc -lvp 4444'",
+        "mitre": {
+          "tid": "T1548.003",
+          "name": "Abuse Elevation: Sudo and Sudo Caching"
+        },
+        "severity": "CRITICAL"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.14",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  },
+  {
+    "alert_id": "ALT-005-6318",
+    "rule_id": "005",
+    "rule_name": "Suspicious Sudo Command",
+    "severity": "CRITICAL",
+    "description": "User 'admin' executed high-risk sudo command containing '/etc/shadow'",
+    "src_ip": "192.168.1.14",
+    "mitre_tid": "T1548.003",
+    "mitre_name": "Abuse Elevation Control Mechanism: Sudo",
+    "timestamp": "2026-03-10T23:51:50.185808",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:46:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'cat /etc/shadow'",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:41:46",
+        "host": "homeserver",
+        "service": "sudo",
+        "type": "sudo_abuse",
+        "message": "User admin ran suspicious sudo command: cat /etc/shadow",
+        "src_ip": "192.168.1.14",
+        "dst_ip": "192.168.1.1",
+        "dst_port": null,
+        "username": "admin",
+        "raw_log": "Mar 10 23:46:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'cat /etc/shadow'",
+        "mitre": {
+          "tid": "T1548.003",
+          "name": "Abuse Elevation: Sudo and Sudo Caching"
+        },
+        "severity": "CRITICAL"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.14",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  },
+  {
+    "alert_id": "ALT-005-7077",
+    "rule_id": "005",
+    "rule_name": "Suspicious Sudo Command",
+    "severity": "CRITICAL",
+    "description": "User 'admin' executed high-risk sudo command containing '/etc/passwd'",
+    "src_ip": "192.168.1.14",
+    "mitre_tid": "T1548.003",
+    "mitre_name": "Abuse Elevation Control Mechanism: Sudo",
+    "timestamp": "2026-03-10T23:51:50.185826",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:43:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'chmod 777 /etc/passwd'",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:44:46",
+        "host": "homeserver",
+        "service": "sudo",
+        "type": "sudo_abuse",
+        "message": "User admin ran suspicious sudo command: chmod 777 /etc/passwd",
+        "src_ip": "192.168.1.14",
+        "dst_ip": "192.168.1.1",
+        "dst_port": null,
+        "username": "admin",
+        "raw_log": "Mar 10 23:43:46 homeserver sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash -c 'chmod 777 /etc/passwd'",
+        "mitre": {
+          "tid": "T1548.003",
+          "name": "Abuse Elevation: Sudo and Sudo Caching"
+        },
+        "severity": "CRITICAL"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.14",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  },
+  {
+    "alert_id": "ALT-006-0652",
+    "rule_id": "006",
+    "rule_name": "Known Malicious IP Communication",
+    "severity": "CRITICAL",
+    "description": "Traffic involving known-bad IP 179.43.128.10: Botnet infrastructure",
+    "src_ip": "179.43.128.10",
+    "mitre_tid": "T1071.001",
+    "mitre_name": "Application Layer Protocol: Web Protocols",
+    "timestamp": "2026-03-10T23:51:50.185849",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:32:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=22",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:17:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "port_scan",
+        "message": "Blocked inbound connection from 179.43.128.10 to port 22",
+        "src_ip": "179.43.128.10",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": null,
+        "raw_log": "Mar 10 23:32:46 homeserver kernel: [UFW BLOCK] IN=eth0 SRC=179.43.128.10 DST=192.168.1.1 DPT=22",
+        "mitre": {
+          "tid": "T1046",
+          "name": "Network Service Discovery"
+        },
+        "severity": "MEDIUM"
+      }
+    ],
+    "threat_intel": {
+      "ip": "179.43.128.10",
+      "abuse_score": 87,
+      "reports": 156,
+      "country": "BR",
+      "isp": "ServidoresCloud",
+      "categories": [
+        "Botnet",
+        "DDoS"
+      ],
+      "known_attacker": true,
+      "last_seen": "2024-02-25",
+      "source": "Offline Threat DB (demo mode)",
+      "tags": [
+        "botnet-node",
+        "ddos-participant"
+      ]
+    }
+  },
+  {
+    "alert_id": "ALT-006-0552",
+    "rule_id": "006",
+    "rule_name": "Known Malicious IP Communication",
+    "severity": "CRITICAL",
+    "description": "Traffic involving known-bad IP 103.252.118.22: Anonymous proxy / VPN abuse",
+    "src_ip": "103.252.118.22",
+    "mitre_tid": "T1071.001",
+    "mitre_name": "Application Layer Protocol: Web Protocols",
+    "timestamp": "2026-03-10T23:51:50.185894",
+    "evidence_count": 1,
+    "sample_log": "Mar 10 23:26:46 homeserver sshd[8529]: Failed password for root from 103.252.118.22 port 58485 ssh2",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:24:46",
+        "host": "homeserver",
+        "service": "sshd",
+        "type": "brute_force",
+        "message": "Failed password for root from 103.252.118.22 port 50479 ssh2",
+        "src_ip": "103.252.118.22",
+        "dst_ip": "192.168.1.1",
+        "dst_port": 22,
+        "username": "root",
+        "raw_log": "Mar 10 23:26:46 homeserver sshd[8529]: Failed password for root from 103.252.118.22 port 58485 ssh2",
+        "mitre": {
+          "tid": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        "severity": "HIGH"
+      }
+    ],
+    "threat_intel": {
+      "ip": "103.252.118.22",
+      "abuse_score": 76,
+      "reports": 89,
+      "country": "CN",
+      "isp": "CNSERVERS LLC",
+      "categories": [
+        "VPN",
+        "Proxy",
+        "Spam"
+      ],
+      "known_attacker": false,
+      "last_seen": "2024-02-20",
+      "source": "Offline Threat DB (demo mode)",
+      "tags": [
+        "anonymous-proxy",
+        "vpn-provider"
+      ]
+    }
+  },
+  {
+    "alert_id": "ALT-007-3153",
+    "rule_id": "007",
+    "rule_name": "Outbound C2 Beaconing Pattern",
+    "severity": "CRITICAL",
+    "description": "Host 192.168.1.8 made 6 regular outbound connections to 179.43.128.10 \u2014 possible C2 beacon",
+    "src_ip": "192.168.1.8",
+    "mitre_tid": "T1041",
+    "mitre_name": "Exfiltration Over C2 Channel",
+    "timestamp": "2026-03-10T23:51:50.185973",
+    "evidence_count": 4,
+    "sample_log": "Mar 10 22:49:46 homeserver firewall: ALLOW OUT src=192.168.1.8 dst=179.43.128.10 dpt=443 proto=TCP",
+    "all_evidence": [
+      {
+        "timestamp": "Mar 10 23:07:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "c2_beacon",
+        "message": "Regular outbound connection to known-bad IP 179.43.128.10:443 (beaconing pattern)",
+        "src_ip": "192.168.1.8",
+        "dst_ip": "179.43.128.10",
+        "dst_port": 443,
+        "username": null,
+        "raw_log": "Mar 10 22:49:46 homeserver firewall: ALLOW OUT src=192.168.1.8 dst=179.43.128.10 dpt=443 proto=TCP",
+        "mitre": {
+          "tid": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols"
+        },
+        "severity": "CRITICAL"
+      },
+      {
+        "timestamp": "Mar 10 22:10:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "c2_beacon",
+        "message": "Regular outbound connection to known-bad IP 179.43.128.10:443 (beaconing pattern)",
+        "src_ip": "192.168.1.8",
+        "dst_ip": "179.43.128.10",
+        "dst_port": 443,
+        "username": null,
+        "raw_log": "Mar 10 22:47:46 homeserver firewall: ALLOW OUT src=192.168.1.8 dst=179.43.128.10 dpt=443 proto=TCP",
+        "mitre": {
+          "tid": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols"
+        },
+        "severity": "CRITICAL"
+      },
+      {
+        "timestamp": "Mar 10 23:21:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "c2_beacon",
+        "message": "Regular outbound connection to known-bad IP 179.43.128.10:443 (beaconing pattern)",
+        "src_ip": "192.168.1.8",
+        "dst_ip": "179.43.128.10",
+        "dst_port": 443,
+        "username": null,
+        "raw_log": "Mar 10 22:51:46 homeserver firewall: ALLOW OUT src=192.168.1.8 dst=179.43.128.10 dpt=443 proto=TCP",
+        "mitre": {
+          "tid": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols"
+        },
+        "severity": "CRITICAL"
+      },
+      {
+        "timestamp": "Mar 10 23:43:46",
+        "host": "homeserver",
+        "service": "firewall",
+        "type": "c2_beacon",
+        "message": "Regular outbound connection to known-bad IP 179.43.128.10:443 (beaconing pattern)",
+        "src_ip": "192.168.1.8",
+        "dst_ip": "179.43.128.10",
+        "dst_port": 443,
+        "username": null,
+        "raw_log": "Mar 10 21:58:46 homeserver firewall: ALLOW OUT src=192.168.1.8 dst=179.43.128.10 dpt=443 proto=TCP",
+        "mitre": {
+          "tid": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols"
+        },
+        "severity": "CRITICAL"
+      }
+    ],
+    "threat_intel": {
+      "ip": "192.168.1.8",
+      "source": "Not in threat database",
+      "abuse_score": 0,
+      "reports": 0,
+      "known_attacker": false,
+      "categories": [
+        "Unknown"
+      ],
+      "country": "Unknown",
+      "tags": []
+    }
+  }
+]

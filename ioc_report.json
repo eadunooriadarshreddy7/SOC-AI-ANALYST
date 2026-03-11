@@ -1,0 +1,183 @@
+{
+  "extraction_time": "2026-03-10T23:51:50.279503",
+  "iocs": {
+    "external_ips": [
+      {
+        "indicator": "103.252.118.22",
+        "type": "External IP",
+        "count": 50,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "179.43.128.10",
+        "type": "External IP",
+        "count": 36,
+        "unique_sources": 2
+      }
+    ],
+    "internal_ips": [
+      {
+        "indicator": "192.168.1.8",
+        "type": "Internal IP",
+        "count": 16,
+        "unique_sources": 4
+      },
+      {
+        "indicator": "192.168.1.1",
+        "type": "Internal IP",
+        "count": 12,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.4",
+        "type": "Internal IP",
+        "count": 10,
+        "unique_sources": 3
+      },
+      {
+        "indicator": "192.168.1.12",
+        "type": "Internal IP",
+        "count": 10,
+        "unique_sources": 4
+      },
+      {
+        "indicator": "192.168.1.18",
+        "type": "Internal IP",
+        "count": 6,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.5",
+        "type": "Internal IP",
+        "count": 6,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.10",
+        "type": "Internal IP",
+        "count": 6,
+        "unique_sources": 3
+      },
+      {
+        "indicator": "192.168.1.7",
+        "type": "Internal IP",
+        "count": 4,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.19",
+        "type": "Internal IP",
+        "count": 4,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.13",
+        "type": "Internal IP",
+        "count": 4,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.17",
+        "type": "Internal IP",
+        "count": 4,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.11",
+        "type": "Internal IP",
+        "count": 4,
+        "unique_sources": 2
+      },
+      {
+        "indicator": "192.168.1.3",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.6",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.9",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.14",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.2",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "192.168.1.16",
+        "type": "Internal IP",
+        "count": 2,
+        "unique_sources": 1
+      }
+    ],
+    "domains": [
+      {
+        "indicator": "d7ab3305e44db31528337.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "3a58d2b9ceacc0bda7b6631b813efd7784e5.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "26379032425c8a45c00f9e38ebf4cbc5da6.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "9d7a3eb1f5ad39acafd7a04e6a35785f6510b5ac.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "1ed465ac17708c6e6dd21b3aae.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "5163d290c854766279a69d6.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "274c50d91cdb4657da1b327.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      },
+      {
+        "indicator": "cd708d3a6447b0abed1dd733c6926fe.data-86326bf0.laqnucxa.io",
+        "type": "Domain",
+        "count": 2,
+        "unique_sources": 1
+      }
+    ],
+    "urls": [],
+    "hashes": [],
+    "emails": [],
+    "cves": []
+  }
+}
