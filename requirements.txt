@@ -1,0 +1,13 @@
+# core dependencies
+anthropic>=0.25.0       # claude api - for ai triage
+requests>=2.31.0        # http calls for abuseipdb / virustotal
+python-dotenv>=1.0.0    # load api keys from .env file
+
+# optional but makes things nicer
+rich>=13.7.0            # nice terminal output for dashboard
+scapy>=2.5.0            # packet capture (needs sudo)
+faker>=24.0.0           # realistic fake log data generation
+
+# utilities
+colorama>=0.4.6         # colored terminal output fallback
+tabulate>=0.9.0         # simple table formatting
