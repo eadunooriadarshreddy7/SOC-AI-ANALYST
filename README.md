@@ -10,6 +10,26 @@ Took me a few weeks to get the full pipeline working. The hardest part was hones
 ![Anthropic](https://img.shields.io/badge/AI-Anthropic%20Claude-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Screenshots
+
+![Pipeline Running](01_pipeline_running.png)
+
+![SOC Dashboard](03_soc_dashboard.png)
+
+![AI Triage](02_ai_triage.png)
+
+![Threat Intel](04_threat_intel.png)
+
+![IR Report](05_ir_report.png)
+
+line 9:  ![Python](...)
+line 10: ![Anthropic](...)
+line 11: ![License](...)
+line 12: (blank)
+line 13: ## Screenshots
+line 14: (blank)
+line 15: ![Pipeline Running](01_pipeline_running.png)
+
 ---
 
 ## What this does
